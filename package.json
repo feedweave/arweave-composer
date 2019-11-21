@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "arweave": "^1.6.0",
+    "bootstrap": "^4.3.1",
     "husky": "^3.1.0",
+    "immutable": "^4.0.0-rc.12",
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "reactstrap": "^8.1.1",
+    "rich-markdown-editor": "^9.10.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
