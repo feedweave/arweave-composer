@@ -6,7 +6,11 @@ import KeyUpload from "./components/KeyUpload";
 
 import "./App.css";
 
-const arweave = Arweave.init();
+const arweave = Arweave.init({
+  host: "gateway.arweave.co",
+  port: 443,
+  protocol: "https"
+});
 
 const APP_NAME = `arweave-blog-0.0.1`;
 
