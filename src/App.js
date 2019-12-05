@@ -40,7 +40,7 @@ const addPost = async (post, user) => {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { user: null };
+    this.state = { user: null, isSaved: false };
     this.handleUser = this.handleUser.bind(this);
     this.handleSave = this.handleSave.bind(this);
   }
@@ -51,14 +51,32 @@ class App extends React.Component {
 
   async handleSave(post) {
     const { user } = this.state;
-    await addPost(post, user);
+    try {
+      await addPost(post, user);
+    } catch (e) {}
+    this.setState({ isSaved: true });
   }
 
   render() {
-    const { user } = this.state;
+    const { user, isSaved } = this.state;
     return (
       <div className="App">
-        {user ? (
+        {isSaved ? (
+          <div>
+            <p>Your transaction is pending confirmation on Arweave!</p>
+            <p>
+              In about 30 seconds, try finding it on{" "}
+              <a
+                href="https://explorer.arweave.co/app/arweave-blog-0.0.1"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Arweave App Explorer
+              </a>
+              .
+            </p>
+          </div>
+        ) : user ? (
           <TextEditor user={user} handleSave={this.handleSave} />
         ) : (
           <KeyUpload handleUser={this.handleUser} arweave={arweave} />

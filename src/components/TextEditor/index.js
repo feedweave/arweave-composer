@@ -19,7 +19,10 @@ class TextEditor extends React.Component {
   render() {
     return (
       <div>
-        <Editor onChange={this.handleChange} placeholder="# Hello world!" />
+        <Editor
+          onChange={this.handleChange}
+          placeholder="# Write some markdown here!"
+        />
         <Button onClick={this.handleSave} color="primary">
           Save
         </Button>
