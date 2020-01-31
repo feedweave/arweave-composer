@@ -22,12 +22,12 @@ import { saveTransaction, arweave } from "../../util";
 
 import academicSchema from "../../schemas/ar-academic";
 import arweaveIdSchema from "../../schemas/arweave-id";
-import arweaveBlogSchema from "../../schemas/arweave-blog";
+import feedweaveSchema from "../../schemas/feedweave";
 import socialGraphSchema from "../../schemas/social-graph";
 
 const schemas = [
   socialGraphSchema,
-  arweaveBlogSchema,
+  feedweaveSchema,
   academicSchema,
   arweaveIdSchema
 ];
