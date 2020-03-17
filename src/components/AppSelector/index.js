@@ -24,12 +24,14 @@ import academicSchema from "../../schemas/ar-academic";
 import arweaveIdSchema from "../../schemas/arweave-id";
 import feedweaveSchema from "../../schemas/feedweave";
 import socialGraphSchema from "../../schemas/social-graph";
+import transactionCommentSchema from "../../schemas/transaction-comment";
 
 const schemas = [
   socialGraphSchema,
   feedweaveSchema,
   academicSchema,
-  arweaveIdSchema
+  arweaveIdSchema,
+  transactionCommentSchema
 ];
 
 const DropDownSelect = ({ items, name, onChange }) => {
